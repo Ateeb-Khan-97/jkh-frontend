@@ -25,7 +25,7 @@ export default function RootLayout({
             sidebarActive={sidebarActive}
           />
           <div className="h-[80px]" />
-          <div className="custom_shadow h-[calc(100vh_-_80px)] overflow-y-auto bg-blue-50 p-10">
+          <div className="custom_shadow h-[calc(100vh_-_80px)] overflow-y-auto bg-blue-50 ">
             {children}
           </div>
         </div>

@@ -17,7 +17,7 @@ function Header() {
 //
 export default function PosPage() {
   return (
-    <section>
+    <section className="p-5">
       <Header />
     </section>
   );
