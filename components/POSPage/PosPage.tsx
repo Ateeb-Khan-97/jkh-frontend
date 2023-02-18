@@ -1,5 +1,6 @@
 'use client';
 import BreadcrumbComponent from 'components/Shared/BreadcrumbComponent';
+import DataTableComponent from 'components/Shared/DataTableComponent';
 //
 import React from 'react';
 //
@@ -15,10 +16,15 @@ function Header() {
   );
 }
 //
+function Table() {
+  return <DataTableComponent data={[]} columns={[]} />;
+}
+//
 export default function PosPage() {
   return (
-    <section className="p-5">
+    <section className="flex flex-col gap-5 p-5">
       <Header />
+      <Table />
     </section>
   );
 }

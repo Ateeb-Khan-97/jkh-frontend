@@ -1,5 +1,5 @@
 'use client';
-import { Button, PasswordInput, TextInput } from '@mantine/core';
+import { Button, Image, PasswordInput, TextInput } from '@mantine/core';
 import customNotification from 'functions/customNotification';
 import { useRouter } from 'next/navigation';
 import { setCookie } from 'cookies-next';
@@ -50,13 +50,20 @@ export default function LoginPage() {
       <section className="flex h-screen w-screen overflow-hidden">
         <div className="flex h-[100%] w-[50%] flex-col items-center justify-center gap-6 p-5">
           <div className="flex w-[500px] max-w-[95%] flex-col gap-2">
-            <h1 className="text-3xl font-bold">Login</h1>
-            <p className="text-gray-600">Access our Dashboard!</p>
+            <div className="rounded-none bg-white lg:rounded-3xl">
+              <Image src={'/logo2.png'} />
+            </div>
           </div>
+        </div>
+        <div className="flex h-[100%] w-[50%] items-center justify-center bg-blue-600">
           <form
             onSubmit={submitHandler}
-            className="flex w-[500px] max-w-[95%] flex-col gap-5"
+            className="flex w-[500px] max-w-[95%] flex-col gap-5 rounded-lg bg-white p-6"
           >
+            <div>
+              <h1 className="text-3xl font-bold">Login</h1>
+              <p className="text-gray-600">Access our Dashboard!</p>
+            </div>
             <TextInput
               ref={userNameRef}
               name="login_user_name"
@@ -83,7 +90,6 @@ export default function LoginPage() {
             </Button>
           </form>
         </div>
-        <div className="h-[100%] w-[50%] bg-blue-600" />
       </section>
     </>
   );
